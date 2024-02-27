@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9B83D355-D627-4074-BAFB-CF1888DF48A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HRMS</RootNamespace>
+    <AssemblyName>HRMS</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AC.ExtendedRenderer.Toolkit">
+      <HintPath>D:\Dll\AC.ExtendedRenderer.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>D:\Dll\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="MarqueControl">
+      <HintPath>D:\Dll\MarqueControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms.Ribbon35">
+      <HintPath>D:\Dll\System.Windows.Forms.Ribbon35.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>D:\Dll\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include=".Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AppClass\AppGlobal.cs" />
+    <Compile Include="AppClass\AppSetting.cs" />
+    <Compile Include="AppClass\MyMessageBox.cs" />
+    <Compile Include="HRMS\Attendance-Leave System.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRMS\Attendance-Leave System.Designer.cs">
+      <DependentUpon>Attendance-Leave System.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppClass\Attendance.cs" />
+    <Compile Include="HRMS\CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRMS\CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppClass\CustomMessageBoxHelpers.cs" />
+    <Compile Include="HRMS\Daily Work Status and Hours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRMS\Daily Work Status and Hours.Designer.cs">
+      <DependentUpon>Daily Work Status and Hours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRMS\DashboardHRMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRMS\DashboardHRMS.Designer.cs">
+      <DependentUpon>DashboardHRMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PMS\AddIssueReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PMS\AddIssueReport.Designer.cs">
+      <DependentUpon>AddIssueReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PMS\DashboardPMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PMS\DashboardPMS.Designer.cs">
+      <DependentUpon>DashboardPMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBClass\ClientMethod.cs" />
+    <Compile Include="DBClass\DBConst.cs" />
+    <Compile Include="DBClass\SPConst.cs" />
+    <Compile Include="DBClass\TableConst.cs" />
+    <Compile Include="HRMS\DocumentManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRMS\DocumentManagement.Designer.cs">
+      <DependentUpon>DocumentManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRMS\Feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRMS\Feedback.Designer.cs">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PMS\FileAttchment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PMS\FileAttchment.Designer.cs">
+      <DependentUpon>FileAttchment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forgot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Forgot.Designer.cs">
+      <DependentUpon>Forgot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppClass\HRMSS.cs" />
+    <Compile Include="AppClass\LeaveRequest.cs" />
+    <Compile Include="AppClass\LeaveRequestForm.cs" />
+    <Compile Include="HRMS\Payroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRMS\Payroll.Designer.cs">
+      <DependentUpon>Payroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRMS\Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRMS\Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PMS\ProjectManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PMS\ProjectManagement.Designer.cs">
+      <DependentUpon>ProjectManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRMS\Time On-Off.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRMS\Time On-Off.Designer.cs">
+      <DependentUpon>Time On-Off.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PMS\TaskManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PMS\TaskManagement.Designer.cs">
+      <DependentUpon>TaskManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PMS\UpdateIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PMS\UpdateIssue.Designer.cs">
+      <DependentUpon>UpdateIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppClass\WorkDetail.cs" />
+    <Compile Include="AppClass\WorkStatus.cs" />
+    <EmbeddedResource Include="HRMS\Attendance-Leave System.resx">
+      <DependentUpon>Attendance-Leave System.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRMS\CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRMS\Daily Work Status and Hours.resx">
+      <DependentUpon>Daily Work Status and Hours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRMS\DashboardHRMS.resx">
+      <DependentUpon>DashboardHRMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PMS\AddIssueReport.resx">
+      <DependentUpon>AddIssueReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PMS\DashboardPMS.resx">
+      <DependentUpon>DashboardPMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRMS\DocumentManagement.resx">
+      <DependentUpon>DocumentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRMS\Feedback.resx">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include=".resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PMS\FileAttchment.resx">
+      <DependentUpon>FileAttchment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Forgot.resx">
+      <DependentUpon>Forgot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRMS\Payroll.resx">
+      <DependentUpon>Payroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRMS\Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PMS\ProjectManagement.resx">
+      <DependentUpon>ProjectManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRMS\Time On-Off.resx">
+      <DependentUpon>Time On-Off.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PMS\TaskManagement.resx">
+      <DependentUpon>TaskManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PMS\UpdateIssue.resx">
+      <DependentUpon>UpdateIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
